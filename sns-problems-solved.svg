@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#232f3e">
+    6 Key Problems Amazon SNS Solves
+  </text>
+
+  <!-- Problem 1: Decoupled Communication -->
+  <g>
+    <circle cx="200" cy="150" r="50" fill="#FF9900" opacity="0.2" stroke="#FF9900" stroke-width="2"/>
+    <text x="200" y="155" text-anchor="middle" font-size="24">🔌</text>
+
+    <rect x="100" y="230" width="200" height="80" rx="5" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
+    <text x="200" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Decoupled</text>
+    <text x="200" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Communication</text>
+    <text x="200" y="290" text-anchor="middle" font-size="11" fill="#666">Loosely coupled services</text>
+    <text x="200" y="305" text-anchor="middle" font-size="11" fill="#666">without tight integration</text>
+  </g>
+
+  <!-- Problem 2: Reliable Message Delivery -->
+  <g>
+    <circle cx="600" cy="150" r="50" fill="#00A1C9" opacity="0.2" stroke="#00A1C9" stroke-width="2"/>
+    <text x="600" y="155" text-anchor="middle" font-size="24">✉️</text>
+
+    <rect x="500" y="230" width="200" height="80" rx="5" fill="#E8F4F8" stroke="#00A1C9" stroke-width="2"/>
+    <text x="600" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Reliable Message</text>
+    <text x="600" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Delivery</text>
+    <text x="600" y="290" text-anchor="middle" font-size="11" fill="#666">Guaranteed delivery with</text>
+    <text x="600" y="305" text-anchor="middle" font-size="11" fill="#666">automatic retries</text>
+  </g>
+
+  <!-- Problem 3: Scalable Notification System -->
+  <g>
+    <circle cx="1000" cy="150" r="50" fill="#37475A" opacity="0.2" stroke="#37475A" stroke-width="2"/>
+    <text x="1000" y="155" text-anchor="middle" font-size="24">📈</text>
+
+    <rect x="900" y="230" width="200" height="80" rx="5" fill="#F0F1F9" stroke="#37475A" stroke-width="2"/>
+    <text x="1000" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Scalable Notification</text>
+    <text x="1000" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">System</text>
+    <text x="1000" y="290" text-anchor="middle" font-size="11" fill="#666">Handle increasing traffic</text>
+    <text x="1000" y="305" text-anchor="middle" font-size="11" fill="#666">automatically</text>
+  </g>
+
+  <!-- Problem 4: Cross-Platform Notifications -->
+  <g>
+    <circle cx="200" cy="450" r="50" fill="#FF6138" opacity="0.2" stroke="#FF6138" stroke-width="2"/>
+    <text x="200" y="455" text-anchor="middle" font-size="24">🌐</text>
+
+    <rect x="100" y="530" width="200" height="80" rx="5" fill="#FFE8E0" stroke="#FF6138" stroke-width="2"/>
+    <text x="200" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Cross-Platform</text>
+    <text x="200" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Notifications</text>
+    <text x="200" y="590" text-anchor="middle" font-size="11" fill="#666">Reach users via email,</text>
+    <text x="200" y="605" text-anchor="middle" font-size="11" fill="#666">SMS, mobile, and more</text>
+  </g>
+
+  <!-- Problem 5: Event-Driven Architecture -->
+  <g>
+    <circle cx="600" cy="450" r="50" fill="#2A7F62" opacity="0.2" stroke="#2A7F62" stroke-width="2"/>
+    <text x="600" y="455" text-anchor="middle" font-size="24">⚡</text>
+
+    <rect x="500" y="530" width="200" height="80" rx="5" fill="#E0F5EE" stroke="#2A7F62" stroke-width="2"/>
+    <text x="600" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Event-Driven</text>
+    <text x="600" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Architecture</text>
+    <text x="600" y="590" text-anchor="middle" font-size="11" fill="#666">Broadcast events to</text>
+    <text x="600" y="605" text-anchor="middle" font-size="11" fill="#666">multiple subscribers</text>
+  </g>
+
+  <!-- Problem 6: Streamlined Integration -->
+  <g>
+    <circle cx="1000" cy="450" r="50" fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="1000" y="455" text-anchor="middle" font-size="24">🔗</text>
+
+    <rect x="900" y="530" width="200" height="80" rx="5" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="1000" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Streamlined</text>
+    <text x="1000" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Integration</text>
+    <text x="1000" y="590" text-anchor="middle" font-size="11" fill="#666">Seamlessly integrate with</text>
+    <text x="1000" y="605" text-anchor="middle" font-size="11" fill="#666">AWS services</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="50" y="660" width="1100" height="35" rx="3" fill="#232f3e" opacity="0.05"/>
+  <text x="600" y="684" text-anchor="middle" font-size="12" fill="#232f3e">
+    SNS enables loosely coupled, scalable, and responsive cloud applications
+  </text>
+</svg>

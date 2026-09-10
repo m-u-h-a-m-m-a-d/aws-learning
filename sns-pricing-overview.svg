@@ -1,0 +1,91 @@
+<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#232f3e">
+    Amazon SNS Pricing Model
+  </text>
+
+  <!-- Pricing Model Section -->
+  <g>
+    <text x="100" y="85" font-size="16" font-weight="bold" fill="#232f3e">Pricing Model: PAY-AS-YOU-GO</text>
+
+    <!-- Card 1: Requests -->
+    <rect x="50" y="110" width="230" height="140" rx="8" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
+    <text x="165" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#FF9900">📤 Requests</text>
+    <text x="165" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Charge for publishing</text>
+    <text x="165" y="175" text-anchor="middle" font-size="11" fill="#232f3e">messages to topics</text>
+    <text x="165" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF9900">Varies by region</text>
+    <text x="165" y="213" text-anchor="middle" font-size="10" fill="#666">and request type</text>
+
+    <!-- Card 2: Data Transfer -->
+    <rect x="305" y="110" width="230" height="140" rx="8" fill="#E8F4F8" stroke="#00A1C9" stroke-width="2"/>
+    <text x="420" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#00A1C9">📊 Data Transfer</text>
+    <text x="420" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Pay for data out of</text>
+    <text x="420" y="175" text-anchor="middle" font-size="11" fill="#232f3e">SNS by amount</text>
+    <text x="420" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#00A1C9">Free within same</text>
+    <text x="420" y="213" text-anchor="middle" font-size="10" fill="#666">Region (EC2 to SNS)</text>
+
+    <!-- Card 3: Retries -->
+    <rect x="560" y="110" width="230" height="140" rx="8" fill="#FFE8E0" stroke="#FF6138" stroke-width="2"/>
+    <text x="675" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#FF6138">🔄 Retries</text>
+    <text x="675" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Automatic retries on</text>
+    <text x="675" y="175" text-anchor="middle" font-size="11" fill="#232f3e">delivery failure</text>
+    <text x="675" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6138">Pay per retry to</text>
+    <text x="675" y="213" text-anchor="middle" font-size="10" fill="#666">ensure reliability</text>
+
+    <!-- Card 4: Push Notifications -->
+    <rect x="815" y="110" width="230" height="140" rx="8" fill="#E0F5EE" stroke="#2A7F62" stroke-width="2"/>
+    <text x="930" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A7F62">📱 Push Notifications</text>
+    <text x="930" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Mobile push to devices</text>
+    <text x="930" y="175" text-anchor="middle" font-size="11" fill="#232f3e">billed per delivery</text>
+    <text x="930" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#2A7F62">Charged based on</text>
+    <text x="930" y="213" text-anchor="middle" font-size="10" fill="#666">notifications sent</text>
+  </g>
+
+  <!-- AWS Free Tier Section -->
+  <g>
+    <rect x="50" y="290" width="1100" height="300" rx="8" fill="#F0F1F9" stroke="#232f3e" stroke-width="2"/>
+
+    <text x="600" y="320" text-anchor="middle" font-size="18" font-weight="bold" fill="#232f3e">AWS Free Tier - No Charges For:</text>
+
+    <!-- Free Tier Items -->
+    <g>
+      <!-- Item 1 -->
+      <circle cx="120" cy="380" r="6" fill="#146EB4"/>
+      <text x="150" y="385" font-size="13" font-weight="bold" fill="#232f3e">1 Million</text>
+      <text x="150" y="403" font-size="13" font-weight="bold" fill="#232f3e">Mobile Push Notifications</text>
+      <text x="150" y="419" font-size="11" fill="#666">per month</text>
+
+      <!-- Item 2 -->
+      <circle cx="550" cy="380" r="6" fill="#146EB4"/>
+      <text x="580" y="385" font-size="13" font-weight="bold" fill="#232f3e">1,000</text>
+      <text x="580" y="403" font-size="13" font-weight="bold" fill="#232f3e">Email Notifications</text>
+      <text x="580" y="419" font-size="11" fill="#666">per month</text>
+
+      <!-- Item 3 -->
+      <circle cx="900" cy="380" r="6" fill="#146EB4"/>
+      <text x="930" y="385" font-size="13" font-weight="bold" fill="#232f3e">100,000</text>
+      <text x="930" y="403" font-size="13" font-weight="bold" fill="#232f3e">HTTP/HTTPS Notifications</text>
+      <text x="930" y="419" font-size="11" fill="#666">per month</text>
+    </g>
+
+    <!-- Note Box -->
+    <rect x="80" y="460" width="1040" height="100" rx="5" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
+    <text x="600" y="485" text-anchor="middle" font-size="13" font-weight="bold" fill="#FF9900">⚠️ Important</text>
+    <text x="600" y="508" text-anchor="middle" font-size="12" fill="#232f3e">
+      Free Tier allowances are available to all AWS customers (with restrictions)
+    </text>
+    <text x="600" y="528" text-anchor="middle" font-size="12" fill="#232f3e">
+      Review AWS Free Tier terms and conditions for complete details and any applicable restrictions
+    </text>
+    <text x="600" y="548" text-anchor="middle" font-size="11" fill="#666">
+      Charges apply beyond these free tier limits
+    </text>
+  </g>
+
+  <!-- Key Characteristics -->
+  <g>
+    <text x="600" y="635" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">
+      ✓ No Upfront Costs  |  ✓ No Minimum Fees  |  ✓ Pay Only for What You Use
+    </text>
+  </g>
+</svg>
