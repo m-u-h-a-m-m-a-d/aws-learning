@@ -2,13 +2,13 @@
 
 ---
 
-## 📊 Visual Diagrams
+## 📊 Visual Reference Files
 
-This lecture includes three helpful visual guides:
+The following diagram files are included with this lesson (open separately or in your markdown viewer):
 
-1. **sns-architecture-diagram.svg** – Illustrates the Pub/Sub architecture with publishers, SNS topics, and multiple subscriber types
-2. **sns-problems-solved.svg** – Visual representation of the 6 key problems that Amazon SNS solves
-3. **sns-pricing-overview.svg** – Breakdown of the pricing model and AWS Free Tier benefits
+- **sns-architecture-diagram.svg** – Pub/Sub Architecture
+- **sns-problems-solved.svg** – 6 Problems Solved  
+- **sns-pricing-overview.svg** – Pricing Model
 
 ---
 
@@ -37,105 +37,7 @@ Amazon SNS functions as a **publish-subscribe (pub/sub) system**, making it poss
 2. **Subscribers receive messages** – Any subscriber to those topics receives the messages
 3. **Multiple delivery endpoints** – Subscribers can be various AWS services, mobile devices, email addresses, or custom applications
 
-<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Title -->
-  <text x="500" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#232f3e">
-    Amazon SNS Architecture: Publish-Subscribe Model
-  </text>
-
-  <!-- Publishers Section -->
-  <g>
-    <!-- Label -->
-    <text x="100" y="100" font-size="16" font-weight="bold" fill="#232f3e">Publishers</text>
-
-    <!-- Publisher 1: Application -->
-    <rect x="20" y="120" width="80" height="70" rx="5" fill="#FF9900" opacity="0.2" stroke="#FF9900" stroke-width="2"/>
-    <text x="60" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Web App</text>
-
-    <!-- Publisher 2: Microservice -->
-    <rect x="120" y="120" width="80" height="70" rx="5" fill="#FF9900" opacity="0.2" stroke="#FF9900" stroke-width="2"/>
-    <text x="160" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Order Service</text>
-
-    <!-- Publisher 3: Lambda -->
-    <rect x="220" y="120" width="80" height="70" rx="5" fill="#FF9900" opacity="0.2" stroke="#FF9900" stroke-width="2"/>
-    <text x="260" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Lambda</text>
-  </g>
-
-  <!-- Arrows pointing to SNS -->
-  <g stroke="#FF9900" stroke-width="2" fill="none" marker-end="url(#arrowhead)">
-    <line x1="60" y1="190" x2="350" y2="260"/>
-    <line x1="160" y1="190" x2="380" y2="270"/>
-    <line x1="260" y1="190" x2="420" y2="280"/>
-  </g>
-
-  <!-- Arrow marker definition -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#FF9900"/>
-    </marker>
-  </defs>
-
-  <!-- SNS Topic (Center) -->
-  <g>
-    <circle cx="500" cy="300" r="80" fill="#FF9900" opacity="0.3" stroke="#FF9900" stroke-width="3"/>
-    <text x="500" y="295" text-anchor="middle" font-size="16" font-weight="bold" fill="#232f3e">SNS</text>
-    <text x="500" y="315" text-anchor="middle" font-size="12" fill="#232f3e">Topic</text>
-  </g>
-
-  <!-- Arrows from SNS to Subscribers -->
-  <g stroke="#146EB4" stroke-width="2" fill="none" marker-end="url(#arrowhead-blue)">
-    <line x1="560" y1="250" x2="680" y2="180"/>
-    <line x1="570" y1="300" x2="700" y2="300"/>
-    <line x1="560" y1="350" x2="680" y2="420"/>
-    <line x1="550" y1="375" x2="620" y2="480"/>
-  </g>
-
-  <!-- Arrow marker for blue -->
-  <defs>
-    <marker id="arrowhead-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#146EB4"/>
-    </marker>
-  </defs>
-
-  <!-- Subscribers Section -->
-  <g>
-    <!-- Label -->
-    <text x="750" y="100" font-size="16" font-weight="bold" fill="#232f3e">Subscribers</text>
-
-    <!-- Subscriber 1: Email -->
-    <rect x="680" y="145" width="80" height="70" rx="5" fill="#146EB4" opacity="0.2" stroke="#146EB4" stroke-width="2"/>
-    <text x="720" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Email</text>
-    <text x="720" y="180" text-anchor="middle" font-size="10" fill="#666">Notifications</text>
-
-    <!-- Subscriber 2: Mobile Push -->
-    <rect x="780" y="260" width="80" height="70" rx="5" fill="#146EB4" opacity="0.2" stroke="#146EB4" stroke-width="2"/>
-    <text x="820" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Mobile</text>
-    <text x="820" y="295" text-anchor="middle" font-size="10" fill="#666">Push</text>
-
-    <!-- Subscriber 3: Lambda -->
-    <rect x="680" y="375" width="80" height="70" rx="5" fill="#146EB4" opacity="0.2" stroke="#146EB4" stroke-width="2"/>
-    <text x="720" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">Lambda</text>
-    <text x="720" y="410" text-anchor="middle" font-size="10" fill="#666">Function</text>
-
-    <!-- Subscriber 4: SQS -->
-    <rect x="590" y="450" width="80" height="70" rx="5" fill="#146EB4" opacity="0.2" stroke="#146EB4" stroke-width="2"/>
-    <text x="630" y="475" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">SQS</text>
-    <text x="630" y="490" text-anchor="middle" font-size="10" fill="#666">Queue</text>
-  </g>
-
-  <!-- Key Benefits Box -->
-  <g>
-    <rect x="20" y="500" width="960" height="80" rx="5" fill="#F0F1F9" stroke="#232f3e" stroke-width="1"/>
-
-    <text x="40" y="525" font-size="12" font-weight="bold" fill="#232f3e">✓ One-to-Many Messaging</text>
-    <text x="280" y="525" font-size="12" font-weight="bold" fill="#232f3e">✓ Decoupled Architecture</text>
-    <text x="580" y="525" font-size="12" font-weight="bold" fill="#232f3e">✓ Multiple Endpoints</text>
-
-    <text x="40" y="555" font-size="12" font-weight="bold" fill="#232f3e">✓ Automatic Retry on Failure</text>
-    <text x="280" y="555" font-size="12" font-weight="bold" fill="#232f3e">✓ Scales Automatically</text>
-    <text x="580" y="555" font-size="12" font-weight="bold" fill="#232f3e">✓ Event-Driven Processing</text>
-  </g>
-</svg>
+**👉 Reference: See `sns-architecture-diagram.svg` for visual**
 
 ### Core Capability
 
@@ -184,90 +86,7 @@ As organizations adopt microservices, serverless computing, and event-driven arc
 - Seamlessly integrate with other AWS services and external applications through SNS topics
 - Reduces complexity of point-to-point integrations
 
-<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
-  <!-- Title -->
-  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#232f3e">
-    6 Key Problems Amazon SNS Solves
-  </text>
-
-  <!-- Problem 1: Decoupled Communication -->
-  <g>
-    <circle cx="200" cy="150" r="50" fill="#FF9900" opacity="0.2" stroke="#FF9900" stroke-width="2"/>
-    <text x="200" y="155" text-anchor="middle" font-size="24">🔌</text>
-
-    <rect x="100" y="230" width="200" height="80" rx="5" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
-    <text x="200" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Decoupled</text>
-    <text x="200" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Communication</text>
-    <text x="200" y="290" text-anchor="middle" font-size="11" fill="#666">Loosely coupled services</text>
-    <text x="200" y="305" text-anchor="middle" font-size="11" fill="#666">without tight integration</text>
-  </g>
-
-  <!-- Problem 2: Reliable Message Delivery -->
-  <g>
-    <circle cx="600" cy="150" r="50" fill="#00A1C9" opacity="0.2" stroke="#00A1C9" stroke-width="2"/>
-    <text x="600" y="155" text-anchor="middle" font-size="24">✉️</text>
-
-    <rect x="500" y="230" width="200" height="80" rx="5" fill="#E8F4F8" stroke="#00A1C9" stroke-width="2"/>
-    <text x="600" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Reliable Message</text>
-    <text x="600" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Delivery</text>
-    <text x="600" y="290" text-anchor="middle" font-size="11" fill="#666">Guaranteed delivery with</text>
-    <text x="600" y="305" text-anchor="middle" font-size="11" fill="#666">automatic retries</text>
-  </g>
-
-  <!-- Problem 3: Scalable Notification System -->
-  <g>
-    <circle cx="1000" cy="150" r="50" fill="#37475A" opacity="0.2" stroke="#37475A" stroke-width="2"/>
-    <text x="1000" y="155" text-anchor="middle" font-size="24">📈</text>
-
-    <rect x="900" y="230" width="200" height="80" rx="5" fill="#F0F1F9" stroke="#37475A" stroke-width="2"/>
-    <text x="1000" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Scalable Notification</text>
-    <text x="1000" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">System</text>
-    <text x="1000" y="290" text-anchor="middle" font-size="11" fill="#666">Handle increasing traffic</text>
-    <text x="1000" y="305" text-anchor="middle" font-size="11" fill="#666">automatically</text>
-  </g>
-
-  <!-- Problem 4: Cross-Platform Notifications -->
-  <g>
-    <circle cx="200" cy="450" r="50" fill="#FF6138" opacity="0.2" stroke="#FF6138" stroke-width="2"/>
-    <text x="200" y="455" text-anchor="middle" font-size="24">🌐</text>
-
-    <rect x="100" y="530" width="200" height="80" rx="5" fill="#FFE8E0" stroke="#FF6138" stroke-width="2"/>
-    <text x="200" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Cross-Platform</text>
-    <text x="200" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Notifications</text>
-    <text x="200" y="590" text-anchor="middle" font-size="11" fill="#666">Reach users via email,</text>
-    <text x="200" y="605" text-anchor="middle" font-size="11" fill="#666">SMS, mobile, and more</text>
-  </g>
-
-  <!-- Problem 5: Event-Driven Architecture -->
-  <g>
-    <circle cx="600" cy="450" r="50" fill="#2A7F62" opacity="0.2" stroke="#2A7F62" stroke-width="2"/>
-    <text x="600" y="455" text-anchor="middle" font-size="24">⚡</text>
-
-    <rect x="500" y="530" width="200" height="80" rx="5" fill="#E0F5EE" stroke="#2A7F62" stroke-width="2"/>
-    <text x="600" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Event-Driven</text>
-    <text x="600" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Architecture</text>
-    <text x="600" y="590" text-anchor="middle" font-size="11" fill="#666">Broadcast events to</text>
-    <text x="600" y="605" text-anchor="middle" font-size="11" fill="#666">multiple subscribers</text>
-  </g>
-
-  <!-- Problem 6: Streamlined Integration -->
-  <g>
-    <circle cx="1000" cy="450" r="50" fill="#8B5CF6" opacity="0.2" stroke="#8B5CF6" stroke-width="2"/>
-    <text x="1000" y="455" text-anchor="middle" font-size="24">🔗</text>
-
-    <rect x="900" y="530" width="200" height="80" rx="5" fill="#F3E8FF" stroke="#8B5CF6" stroke-width="2"/>
-    <text x="1000" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Streamlined</text>
-    <text x="1000" y="570" text-anchor="middle" font-size="13" font-weight="bold" fill="#232f3e">Integration</text>
-    <text x="1000" y="590" text-anchor="middle" font-size="11" fill="#666">Seamlessly integrate with</text>
-    <text x="1000" y="605" text-anchor="middle" font-size="11" fill="#666">AWS services</text>
-  </g>
-
-  <!-- Bottom note -->
-  <rect x="50" y="660" width="1100" height="35" rx="3" fill="#232f3e" opacity="0.05"/>
-  <text x="600" y="684" text-anchor="middle" font-size="12" fill="#232f3e">
-    SNS enables loosely coupled, scalable, and responsive cloud applications
-  </text>
-</svg>
+**👉 Reference: See `sns-problems-solved.svg` for visual breakdown**
 
 ---
 
@@ -344,97 +163,7 @@ AWS Free Tier offers some Amazon SNS notifications at no charge:
 
 ⚠️ **Note:** There are restrictions that apply, so review the AWS Free Tier terms for details.
 
-<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg">
-  <!-- Title -->
-  <text x="600" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#232f3e">
-    Amazon SNS Pricing Model
-  </text>
-
-  <!-- Pricing Model Section -->
-  <g>
-    <text x="100" y="85" font-size="16" font-weight="bold" fill="#232f3e">Pricing Model: PAY-AS-YOU-GO</text>
-
-    <!-- Card 1: Requests -->
-    <rect x="50" y="110" width="230" height="140" rx="8" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
-    <text x="165" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#FF9900">📤 Requests</text>
-    <text x="165" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Charge for publishing</text>
-    <text x="165" y="175" text-anchor="middle" font-size="11" fill="#232f3e">messages to topics</text>
-    <text x="165" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF9900">Varies by region</text>
-    <text x="165" y="213" text-anchor="middle" font-size="10" fill="#666">and request type</text>
-
-    <!-- Card 2: Data Transfer -->
-    <rect x="305" y="110" width="230" height="140" rx="8" fill="#E8F4F8" stroke="#00A1C9" stroke-width="2"/>
-    <text x="420" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#00A1C9">📊 Data Transfer</text>
-    <text x="420" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Pay for data out of</text>
-    <text x="420" y="175" text-anchor="middle" font-size="11" fill="#232f3e">SNS by amount</text>
-    <text x="420" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#00A1C9">Free within same</text>
-    <text x="420" y="213" text-anchor="middle" font-size="10" fill="#666">Region (EC2 to SNS)</text>
-
-    <!-- Card 3: Retries -->
-    <rect x="560" y="110" width="230" height="140" rx="8" fill="#FFE8E0" stroke="#FF6138" stroke-width="2"/>
-    <text x="675" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#FF6138">🔄 Retries</text>
-    <text x="675" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Automatic retries on</text>
-    <text x="675" y="175" text-anchor="middle" font-size="11" fill="#232f3e">delivery failure</text>
-    <text x="675" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF6138">Pay per retry to</text>
-    <text x="675" y="213" text-anchor="middle" font-size="10" fill="#666">ensure reliability</text>
-
-    <!-- Card 4: Push Notifications -->
-    <rect x="815" y="110" width="230" height="140" rx="8" fill="#E0F5EE" stroke="#2A7F62" stroke-width="2"/>
-    <text x="930" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#2A7F62">📱 Push Notifications</text>
-    <text x="930" y="158" text-anchor="middle" font-size="11" fill="#232f3e">Mobile push to devices</text>
-    <text x="930" y="175" text-anchor="middle" font-size="11" fill="#232f3e">billed per delivery</text>
-    <text x="930" y="198" text-anchor="middle" font-size="11" font-weight="bold" fill="#2A7F62">Charged based on</text>
-    <text x="930" y="213" text-anchor="middle" font-size="10" fill="#666">notifications sent</text>
-  </g>
-
-  <!-- AWS Free Tier Section -->
-  <g>
-    <rect x="50" y="290" width="1100" height="300" rx="8" fill="#F0F1F9" stroke="#232f3e" stroke-width="2"/>
-
-    <text x="600" y="320" text-anchor="middle" font-size="18" font-weight="bold" fill="#232f3e">AWS Free Tier - No Charges For:</text>
-
-    <!-- Free Tier Items -->
-    <g>
-      <!-- Item 1 -->
-      <circle cx="120" cy="380" r="6" fill="#146EB4"/>
-      <text x="150" y="385" font-size="13" font-weight="bold" fill="#232f3e">1 Million</text>
-      <text x="150" y="403" font-size="13" font-weight="bold" fill="#232f3e">Mobile Push Notifications</text>
-      <text x="150" y="419" font-size="11" fill="#666">per month</text>
-
-      <!-- Item 2 -->
-      <circle cx="550" cy="380" r="6" fill="#146EB4"/>
-      <text x="580" y="385" font-size="13" font-weight="bold" fill="#232f3e">1,000</text>
-      <text x="580" y="403" font-size="13" font-weight="bold" fill="#232f3e">Email Notifications</text>
-      <text x="580" y="419" font-size="11" fill="#666">per month</text>
-
-      <!-- Item 3 -->
-      <circle cx="900" cy="380" r="6" fill="#146EB4"/>
-      <text x="930" y="385" font-size="13" font-weight="bold" fill="#232f3e">100,000</text>
-      <text x="930" y="403" font-size="13" font-weight="bold" fill="#232f3e">HTTP/HTTPS Notifications</text>
-      <text x="930" y="419" font-size="11" fill="#666">per month</text>
-    </g>
-
-    <!-- Note Box -->
-    <rect x="80" y="460" width="1040" height="100" rx="5" fill="#FFF9E6" stroke="#FF9900" stroke-width="2"/>
-    <text x="600" y="485" text-anchor="middle" font-size="13" font-weight="bold" fill="#FF9900">⚠️ Important</text>
-    <text x="600" y="508" text-anchor="middle" font-size="12" fill="#232f3e">
-      Free Tier allowances are available to all AWS customers (with restrictions)
-    </text>
-    <text x="600" y="528" text-anchor="middle" font-size="12" fill="#232f3e">
-      Review AWS Free Tier terms and conditions for complete details and any applicable restrictions
-    </text>
-    <text x="600" y="548" text-anchor="middle" font-size="11" fill="#666">
-      Charges apply beyond these free tier limits
-    </text>
-  </g>
-
-  <!-- Key Characteristics -->
-  <g>
-    <text x="600" y="635" text-anchor="middle" font-size="12" font-weight="bold" fill="#232f3e">
-      ✓ No Upfront Costs  |  ✓ No Minimum Fees  |  ✓ Pay Only for What You Use
-    </text>
-  </g>
-</svg>
+**👉 Reference: See `sns-pricing-overview.svg` for pricing model visual**
 
 ### Pricing Model Summary
 
@@ -522,7 +251,14 @@ Amazon SNS follows a pay-as-you-go model where you are charged based on the numb
 
 ## Next Steps
 
-- Explore SNS console and topic creation
-- Practice pub/sub patterns
-- Learn about SNS filters and message attributes
-- Understand integrations with other AWS services
+- Review the 3 visual diagram files included with these notes
+- Practice creating SNS topics in AWS Console
+- Explore pub/sub patterns and use cases
+- Learn about SNS integrations with Lambda and SQS
+- Study for the course quiz
+
+---
+
+**Course:** Amazon SNS, Getting Started  
+**Lesson:** 1 - Introduction to Amazon SNS  
+**Last Updated:** September 10, 2026
